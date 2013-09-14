@@ -1,0 +1,28 @@
+{
+  "name": "bind-key",
+  "version": "0.0.0",
+  "description": "Library To Bind Keyboard Events",
+  "main": "index.js",
+  "scripts": {
+    "test": "fox"
+  },
+  "dependencies": {
+    "on-off": "*",
+    "keyname-of": "0.0.0"
+  },
+  "devDependencies": {
+    "fox": "*",
+    "random-color": "*"
+  },
+  "keywords": [
+    "dom",
+    "keyboard",
+    "event"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/bind-key.git",
+    "type": "git"
+  },
+  "author": "Azer Koçulu <azer@kodfabrik.com>",
+  "license": "BSD"
+}
