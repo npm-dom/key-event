@@ -1,24 +1,25 @@
+var test = require('prova');
 var bind = require("./");
 var randomColor = require("random-color");
 
-beforeEach(function(){
-  document.body.innerHTML = '<textarea></textarea>';
-});
+test('binds keynames', function (t) {
+  reset();
 
-it('binds keynames', function(){
   var el = document.querySelector('textarea');
 
-  var fn = bind(el, 'backspace', function () {
-    el.value = '';
 
-    bind.on(el, 'ctrl alt f', function (){
-      el.value = '';
-    });
-
-    bind.off(el, 'backspace', fn);
+  bind(el, 'backspace', function self () {
+    el.value = 'pressed backspace. removing this keybinding now.';
+    bind.off(el, 'backspace', self);
   });
 
-  bind(el, 'ctrl alt c', function () {
-    el.style.backgroundColor = randomColor();
+  bind(el, 'alt c', function () {
+    document.body.style.backgroundColor = randomColor();
   });
+
+  t.end();
 });
+
+function reset () {
+  document.body.innerHTML =  '<textarea style="width: 200px; height: 200px;"></textarea><br>' + ['backspace', 'alt c'].join('<br>');
+}

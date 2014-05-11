@@ -1,17 +1,17 @@
 {
   "name": "bind-key",
   "version": "0.0.0",
-  "description": "Library To Bind Keyboard Events",
+  "description": "Add/remove keyboard events",
   "main": "index.js",
   "scripts": {
-    "test": "fox"
+    "test": "node test -b"
   },
   "dependencies": {
-    "on-off": "*",
-    "keyname-of": "0.0.0"
+    "keyname-of": "0.0.0",
+    "dom-event": "0.0.0"
   },
   "devDependencies": {
-    "fox": "*",
+    "prova": "*",
     "random-color": "*"
   },
   "keywords": [
@@ -20,7 +20,7 @@
     "event"
   ],
   "repository": {
-    "url": "git@github.com:azer/bind-key.git",
+    "url": "git@github.com:npm-dom/key-event.git",
     "type": "git"
   },
   "author": "Azer Koçulu <azer@kodfabrik.com>",

@@ -1,12 +1,12 @@
 var keynameOf = require("keyname-of");
-var events = require("on-off");
+var events = require("dom-event");
 
 module.exports = on;
 module.exports.on = on;
 module.exports.off = off;
 
 function on (element, keys, callback) {
-  var expected = process(keys);
+  var expected = parse(keys);
 
   var fn = events.on(element, 'keyup', function(event){
 
@@ -20,6 +20,7 @@ function on (element, keys, callback) {
 
   });
 
+
   callback['cb-' + keys] = fn;
 
   return callback;
@@ -29,7 +30,7 @@ function off (element, keys, callback) {
   events.off(element, 'keyup', callback['cb-' + keys]);
 }
 
-function process (keys){
+function parse (keys){
   var result = {};
   keys = keys.split(/[^\w]+/);
 
