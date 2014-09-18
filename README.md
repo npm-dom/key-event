@@ -1,20 +1,20 @@
-## key-event
+## bind-key
 
 Add/remove keyboard events.
 
 ## Install
 
 ```bash
-$ npm install key-event
+$ npm install bind-key
 ```
 
 ## Usage
 
 ```js
-var keyEvent = require('key-event')
-var removeKeyEvent = keyEvent.off
+var bindKey = require('bind-key')
+var off = bindKey.off
 
-keyEvent(element, 'ctrl alt u', function (event) {
+bindKey(element, 'ctrl alt u', function (event) {
   console.log('hi!')
 })
 ```
