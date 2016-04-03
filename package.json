@@ -1,5 +1,5 @@
 {
-  "name": "bind-key",
+  "name": "key-event",
   "version": "0.0.0",
   "description": "Add/remove keyboard events",
   "main": "index.js",
