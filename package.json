@@ -7,8 +7,8 @@
     "test": "node test -b"
   },
   "dependencies": {
-    "keyname-of": "0.0.0",
-    "dom-event": "0.0.0"
+    "keyname-of": "azer/keyname-of",
+    "dom-event": "npm-dom/dom-event"
   },
   "devDependencies": {
     "prova": "*",
