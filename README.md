@@ -1,5 +1,7 @@
 ## key-event
 
+[![Build Status](https://travis-ci.org/npm-dom/key-event.svg?branch=master)](https://travis-ci.org/npm-dom/key-event)
+
 Add/remove keyboard events.
 
 ## Install
